@@ -1,13 +1,13 @@
-# 📦 Système de Gestion des Commandes Fournisseurs
+#  Système de Gestion des Commandes Fournisseurs
 
-## 📝 Présentation du Projet
+##  Présentation du Projet
 Ce projet a été réalisé dans le cadre du module de **Programmation Orientée Objet (POO) et Bases de Données** en **Licence 2 Informatique de Gestion (IAGE)**.
 
 L'objectif est de développer une application console (CLI) en Python permettant à une entreprise sénégalaise de distribution de matériel informatique d'informatiser la gestion de ses achats auprès de ses fournisseurs. L'application remplace un suivi manuel sur papier afin de réduire les erreurs, optimiser la gestion des stocks et offrir une meilleure visibilité sur les flux d'approvisionnement.
 
 ---
 
-## 🛠️ Architecture Technique & Design Patterns
+##  Architecture Technique & Design Patterns
 L'application respecte une séparation stricte des responsabilités (architecture en couches) et s'appuie sur plusieurs concepts avancés de la POO :
 
 * **Pattern Singleton :** Implémenté dans la classe de connexion pour garantir qu'une seule et unique instance de connexion à la base de données MySQL reste active à travers toute l'application.
@@ -17,24 +17,24 @@ L'application respecte une séparation stricte des responsabilités (architectur
 
 ---
 
-## 📁 Structure du Projet
+##  Structure du Projet
 Le projet est découpé en packages Python distincts pour assurer une excellente maintenabilité :
 
 ```text
-📂 gestion_commandes_fournisseurs/
+gestion_commandes_fournisseurs/
 │
-├── 📂 database/
+├──  database/
 │   ├── __init__.py
 │   ├── config.py          # Configuration des accès MySQL (Hôte, port, user, base)
 │   └── connexion.py       # Singleton de connexion à la base de données
 │
-├── 📂 models/
+├── models/
 │   ├── __init__.py
 │   ├── fournisseur.py     # Modèle de l'entité Fournisseur
 │   ├── produit.py         # Modèle de l'entité Produit
 │   └── commande.py        # Modèle de l'entité Commande
 │
-├── 📂 daos/
+├──  daos/
 │   ├── __init__.py
 │   ├── base_dao.py        # Classe abstraite contenant le contrat CRUD
 │   ├── fournisseur_dao.py # Gestion des requêtes SQL pour les fournisseurs
